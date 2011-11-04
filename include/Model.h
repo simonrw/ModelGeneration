@@ -1,10 +1,23 @@
+/** @file Model.h
+ *
+ * @brief Model file
+ *
+ * This file contains the Model structure which has no
+ * methods and is a data container.
+ */
 #ifndef MODEL_H
 
 #define MODEL_H
 
 #include <string>
 
-/** @brief Class holding the state of the system
+/**
+ * @class Model
+ *
+ * @brief Class holding the state of the system
+ *
+ * @author Simon Walker
+ *
  *
  * Structure that holds the parameters for the model system. Is
  * taken as a parameter in the main model generation function. The

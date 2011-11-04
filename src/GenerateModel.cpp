@@ -1,3 +1,14 @@
+/** @file GenerateModel.cpp
+ *
+ * @brief Model generation code
+ *
+ * @author Simon Walker
+ *
+ * Contains some utility functions (in the anonymous namespace) 
+ * which facilitate the calculation of a synthetic lightcurve, and
+ * the master function GenerateSynthetic which is accessible to the
+ * user of the library.
+ */
 #include "GenerateModel.h"
 #include <cmath>
 #include <iostream>
@@ -10,6 +21,13 @@ using namespace std;
 
 namespace
 {
+    /** @brief @f$\Omega@f$ calculator
+     *
+     * Calculates the @f$\Omega@f$ parameter: @f$\Omega = \sum_{n=0}^4 c_n (n + 4)^{-1}@f$
+     *
+     * @param[in] coeffs Limb darkening coefficients @f$c_{i}, \;  i \in [0, 4]@f$
+     * @return @f$\Omega@f$ value
+     */
     inline double calcOmega(const vector<double> &coeffs)
     {
         double returnval;
@@ -20,9 +38,34 @@ namespace
         return returnval;
     }
 
+    /** @brief Square function
+     *
+     * Templated square function
+     *
+     * @param[in] val Value to be squared, templated
+     * @return Squared value
+     */
     template <typename T>
     inline double square(T val) { return val * val; }
 
+    /** @brief Intensity at position r
+     *
+     * Calculates the intensity at position @f$r@f$, the normalised position
+     * on the stellar disk.
+     *
+     * @f[
+     * I(r) = 1 - \sum_{n=1}^4 c_n (1 - \mu^{n/2})
+     * @f]
+     *
+     * with @f$\mu = \cos \theta = (1-r^2)^{1/2}@f$.
+     *
+     * @param[in] r Normalised distance
+     * @param[in] c1 Limb darkening coefficient
+     * @param[in] c2 Limb darkening coefficient
+     * @param[in] c3 Limb darkening coefficient
+     * @param[in] c4 Limb darkening coefficient
+     * @return Intensity value
+     */
     double I(double r, double c1, double c2, double c3, double c4)
     {
         double rprimed = 1. - square(r);
@@ -35,6 +78,22 @@ namespace
         return I;
     }
 
+    /** @brief Intensity at position r
+     *
+     *
+     * Calculates the intensity at position @f$r@f$, the normalised position
+     * on the stellar disk.
+     *
+     * @f[
+     * I(r) = 1 - \sum_{n=1}^4 c_n (1 - \mu^{n/2})
+     * @f]
+     *
+     * with @f$\mu = \cos \theta = (1-r^2)^{1/2}@f$.
+     *
+     * @param[in] r Normalised distance
+     * @param[in] coeffs std::vector of coefficients, size 5
+     * @return Intensity value
+     */
     double I(double r, const std::vector<double> &coeffs)
     {
         double rprimed = 1. - square(r);
@@ -52,6 +111,22 @@ namespace
         return I;
     }
 
+    /** @brief Integrates the intensity in a given range
+     *
+     * Calculates 
+     *
+     * @f[
+     * \int_{rl}^{rh} I(r) dr
+     * @f]
+     *
+     * @param[in] dr Distance increment
+     * @param[in] c1 Limb darkening coefficient
+     * @param[in] c2 Limb darkening coefficient
+     * @param[in] c3 Limb darkening coefficient
+     * @param[in] c4 Limb darkening coefficient
+     * @param[in] rlow Lower distance limit
+     * @param[in] rhigh Lower distance limit
+     */
     double IntegratedI(double dr, double c1, double c2, double c3, double c4, double rlow, double rhigh)
     {
         double sum = 0;
@@ -64,6 +139,19 @@ namespace
     }
 
 
+    /** @brief Integrates the intensity in a given range
+     *
+     * Calculates 
+     *
+     * @f[
+     * \int_{rl}^{rh} I(r) dr
+     * @f]
+     *
+     * @param[in] dr Distance increment
+     * @param[in] coeffs std::vector of coefficients, size 5
+     * @param[in] rlow Lower distance limit
+     * @param[in] rhigh Lower distance limit
+     */
     double IntegratedI(double dr, const std::vector<double> &coeffs, double rlow, double rhigh)
     {
         double sum = 0;
