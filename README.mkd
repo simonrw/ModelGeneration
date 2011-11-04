@@ -1,0 +1,3 @@
+Transit model generation
+
+This code uses the small object approximation from [1]
