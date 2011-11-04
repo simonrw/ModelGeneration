@@ -8,6 +8,8 @@
 # Also you must add the MODELTARGET name to the dependency list
 # so it compiles before any code that uses it.
 
+cmake_minimum_required(VERSION 2.4)
+
 
 # Name of the library to create
 set(TARGET Modelgen)
