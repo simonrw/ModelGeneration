@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="transitlogo.svg"
+   inkscape:export-filename="/Users/simon/tmp/Modelgen/images/transitlogo.png"
+   inkscape:export-xdpi="12.861378"
+   inkscape:export-ydpi="12.861378">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="374.96226"
+     inkscape:cy="520.06357"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="960"
+     inkscape:window-height="757"
+     inkscape:window-x="1715"
+     inkscape:window-y="184"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffff00;stroke:#000000"
+       d="M 324.25 640.21875 C 338.31847 644.35088 353.15687 646.65625 368.5625 646.65625 C 437.66814 646.65625 496.2362 601.99176 517.28125 540 C 512.56197 543.16597 507.97789 546.36002 503.09375 549.5 C 494.01471 555.33686 484.64718 561.09851 475.03125 566.8125 C 465.41532 572.52649 455.54769 578.17064 445.4375 583.71875 C 435.32731 589.26686 424.96807 594.72327 414.40625 600.0625 C 403.84443 605.40173 393.33724 610.49205 382.875 615.34375 C 372.41276 620.19545 362.02151 624.80091 351.71875 629.15625 C 342.46747 633.06709 333.32684 636.71488 324.25 640.21875 z "
+       id="path3038" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;stroke:#000000"
+       id="path2991"
+       sodipodi:cx="221.42857"
+       sodipodi:cy="616.64789"
+       sodipodi:rx="27.142857"
+       sodipodi:ry="27.142857"
+       d="m 248.57143,616.64789 a 27.142857,27.142857 0 1 1 -54.28571,0 27.142857,27.142857 0 1 1 54.28571,0 z"
+       transform="translate(0,54.285714)" />
+    <path
+       transform="matrix(0.89244732,-0.45115161,0.45115161,0.89244732,-188.53889,218.70161)"
+       d="m 705.71429,498.07648 a 342.85715,114.28571 0 1 1 -685.71429,0 342.85715,114.28571 0 1 1 685.71429,0 z"
+       sodipodi:ry="114.28571"
+       sodipodi:rx="342.85715"
+       sodipodi:cy="498.07648"
+       sodipodi:cx="362.85715"
+       id="path3033"
+       style="fill:none;stroke:#000000"
+       sodipodi:type="arc" />
+    <path
+       style="fill:#ffff00;stroke:#000000"
+       d="M 368.5625 332.375 C 295.15572 332.375 233.70307 382.77571 216.4375 450.8125 C 213.29028 463.21446 211.4375 476.11918 211.4375 489.5 C 211.4375 560.88197 259.06376 621.07251 324.25 640.21875 C 333.32684 636.71488 342.46747 633.06709 351.71875 629.15625 C 362.02151 624.80091 372.41276 620.19545 382.875 615.34375 C 393.33724 610.49205 403.84443 605.40173 414.40625 600.0625 C 424.96807 594.72327 435.32731 589.26686 445.4375 583.71875 C 455.54769 578.17064 465.41532 572.52649 475.03125 566.8125 C 484.64718 561.09851 494.01471 555.33686 503.09375 549.5 C 507.97789 546.36002 512.56197 543.16597 517.28125 540 C 522.66602 524.13826 525.71875 507.18196 525.71875 489.5 C 525.71875 424.80733 486.60067 369.31648 430.75 345.21875 C 411.67494 336.98849 390.65743 332.375 368.5625 332.375 z "
+       id="path3036" />
+  </g>
+</svg>
