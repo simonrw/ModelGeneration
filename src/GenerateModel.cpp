@@ -187,7 +187,7 @@ vector<double> GenerateSynthetic(const vector<double> &jd, const Model &m)
     double angFreq = 2. * M_PI / (m.period * secondsInDay);
 //    cout << "Angular frequency: " << angFreq << " rad per sec" << endl;
 
-    ///* get the cosine of the inclination */
+    // get the cosine of the inclination
     double cosi = cos(m.i * radiansInDegree);
 
     const double p = (m.rp * rJup) / (m.rs * rSun);
@@ -257,13 +257,13 @@ vector<double> GenerateSynthetic(const vector<double> &jd, const Model &m)
         }
 
 
-        ///* append the data to the vectors */
+        // append the data to the vectors
         //lc.jd[i] = t / secondsInDay + midpoint;
         //lc.flux[i] = F;
         Flux.push_back(F);
 
     }
-    ////outfile.close();
+    //outfile.close();
 
     //lc.radius = rPlan / rJup;
     //return lc;
