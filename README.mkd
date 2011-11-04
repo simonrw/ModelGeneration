@@ -1,3 +1,22 @@
-Transit model generation
+#Transit model generation
+###S. R. Walker
 
-This code uses the small object approximation from [1]
+##Introduction
+
+This code uses the small object approximation from [Mandel and Agol][1] to generate false lightcurves. The user must supply a transit model (documented in Model.h) with the correct parameters, and time information in Julian days (Days since January 1, 4713 BC Greenwich noon - [wiki][2]). The model must include planetary, system and stellar parameters. 
+
+
+[1]: http://adsabs.harvard.edu/abs/2002ApJ...580L.171M "ADS"
+[2]: http://en.wikipedia.org/wiki/Julian_day "Julian day"
+
+## Usage
+
+The software is designed to be added as a subdirectory to a [cmake][3] project. Four steps need to be taken:
+
+* add the directory as a `submodule`,
+* add the `MODELGEN_INCLUDE_DIR` as an include,
+* add the `MODELGEN_LIBRARIES` as a link library,
+* add `MODELTARGET` as a dependency to any other code.
+
+[3]: http://www.cmake.org "CMake"
+
