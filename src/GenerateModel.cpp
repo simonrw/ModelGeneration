@@ -96,19 +96,12 @@ namespace
      */
     double I(double r, const std::vector<double> &coeffs)
     {
-        double rprimed = 1. - square(r);
+        double c1 = coeffs.at(0);
+        double c2 = coeffs.at(1);
+        double c3 = coeffs.at(2);
+        double c4 = coeffs.at(3);
 
-
-        double I = 1.;
-        for (int i=1; i<=4; ++i)
-        {
-            double coeff = coeffs.at(i);
-
-            I -= coeff * (1. - pow(rprimed, static_cast<double>(i)/4.));
-        }
-
-
-        return I;
+        return I(r, c1, c2, c3, c4);
     }
 
     /** @brief Integrates the intensity in a given range
