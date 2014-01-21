@@ -147,13 +147,12 @@ namespace
      */
     double IntegratedI(double dr, const std::vector<double> &coeffs, double rlow, double rhigh)
     {
-        double sum = 0;
-        for (double r=rlow; r<=rhigh; r+=dr)
-        {
-            sum += I(r, coeffs) * dr * 2. * r;
-        }
-        return sum;
+        double c1 = coeffs.at(0);
+        double c2 = coeffs.at(1);
+        double c3 = coeffs.at(2);
+        double c4 = coeffs.at(3);
 
+        return IntegratedI(dr, c1, c2, c3, c4, rlow, rhigh);
     }
 }
 
