@@ -30,7 +30,7 @@ namespace
      */
     inline double calcOmega(const vector<double> &coeffs)
     {
-        double returnval;
+        double returnval = 0;
         for (int n=0; n<=4; ++n)
         {
             returnval += coeffs.at(n) / (n + 4.);
