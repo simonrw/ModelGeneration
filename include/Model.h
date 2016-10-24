@@ -30,7 +30,6 @@
  *
  * @li id
  * @li name
- * @li submodel_id
  * @li mstar
  * @li teff
  *
@@ -57,13 +56,6 @@ struct Model
      *
      * Can be used to name the object but is not required */
     std::string name;
-
-    /** @brief Subtraction model id
-     *
-     * Used to link the current model with a subtraction 
-     * model.
-     */
-    int submodel_id;
 
     /** @brief Orbital period
      *
